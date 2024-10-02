@@ -34,8 +34,9 @@
             textBoxTempC = new TextBox();
             textBoxTempF = new TextBox();
             labelTempInC = new Label();
-            label2 = new Label();
+            labelTempInF = new Label();
             labelTitle = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // buttonFtoC
@@ -44,7 +45,7 @@
             buttonFtoC.Name = "buttonFtoC";
             buttonFtoC.Size = new Size(89, 23);
             buttonFtoC.TabIndex = 0;
-            buttonFtoC.Text = "C <- F";
+            buttonFtoC.Text = "<- C to F";
             buttonFtoC.UseVisualStyleBackColor = true;
             buttonFtoC.Click += buttonFtoC_Click;
             // 
@@ -54,13 +55,13 @@
             buttonCtoF.Name = "buttonCtoF";
             buttonCtoF.Size = new Size(89, 23);
             buttonCtoF.TabIndex = 1;
-            buttonCtoF.Text = "C -> F";
+            buttonCtoF.Text = "C to F ->";
             buttonCtoF.UseVisualStyleBackColor = true;
             buttonCtoF.Click += buttonCtoF_Click;
             // 
             // buttonClear
             // 
-            buttonClear.Location = new Point(127, 105);
+            buttonClear.Location = new Point(127, 137);
             buttonClear.Name = "buttonClear";
             buttonClear.Size = new Size(89, 23);
             buttonClear.TabIndex = 2;
@@ -91,14 +92,14 @@
             labelTempInC.TabIndex = 5;
             labelTempInC.Text = "Temperature °C";
             // 
-            // label2
+            // labelTempInF
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(238, 33);
-            label2.Name = "label2";
-            label2.Size = new Size(87, 15);
-            label2.TabIndex = 6;
-            label2.Text = "Temperature °F";
+            labelTempInF.AutoSize = true;
+            labelTempInF.Location = new Point(238, 33);
+            labelTempInF.Name = "labelTempInF";
+            labelTempInF.Size = new Size(87, 15);
+            labelTempInF.TabIndex = 6;
+            labelTempInF.Text = "Temperature °F";
             // 
             // labelTitle
             // 
@@ -109,20 +110,31 @@
             labelTitle.TabIndex = 7;
             labelTitle.Text = "Temperature Converter";
             // 
-            // Main
+            // button1
+            // 
+            button1.Location = new Point(127, 105);
+            button1.Name = "button1";
+            button1.Size = new Size(89, 23);
+            button1.TabIndex = 8;
+            button1.Text = "C to K - >";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(360, 160);
+            ClientSize = new Size(359, 172);
+            Controls.Add(button1);
             Controls.Add(labelTitle);
-            Controls.Add(label2);
+            Controls.Add(labelTempInF);
             Controls.Add(labelTempInC);
             Controls.Add(textBoxTempF);
             Controls.Add(textBoxTempC);
             Controls.Add(buttonClear);
             Controls.Add(buttonCtoF);
             Controls.Add(buttonFtoC);
-            Name = "Main";
+            Name = "FormMain";
             Text = "Temperature Converter";
             ResumeLayout(false);
             PerformLayout();
@@ -136,7 +148,8 @@
         private TextBox textBoxTempC;
         private TextBox textBoxTempF;
         private Label labelTempInC;
-        private Label label2;
+        private Label labelTempInF;
         private Label labelTitle;
+        private Button button1;
     }
 }
