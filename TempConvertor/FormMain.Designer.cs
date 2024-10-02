@@ -37,6 +37,7 @@
             labelTempInF = new Label();
             labelTitle = new Label();
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // buttonFtoC
@@ -120,11 +121,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(258, 105);
+            button2.Name = "button2";
+            button2.Size = new Size(89, 23);
+            button2.TabIndex = 9;
+            button2.Text = "Clear";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(359, 172);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(labelTitle);
             Controls.Add(labelTempInF);
@@ -151,5 +162,6 @@
         private Label labelTempInF;
         private Label labelTitle;
         private Button button1;
+        private Button button2;
     }
 }
